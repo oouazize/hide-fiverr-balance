@@ -1,0 +1,28 @@
+{
+	"manifest_version": 3,
+	"name": "Fiverr Balance Hider",
+	"version": "1.0",
+	"description": "Hides the user balance on Fiverr dashboard",
+	"icons": {
+		"16": "icons/icon16.png",
+		"32": "icons/icon16.png",
+		"48": "icons/icon16.png",
+		"128": "icons/icon16.png"
+	},
+	"action": {
+		"default_icon": {
+			"16": "icons/icon16.png",
+			"32": "icons/icon16.png",
+			"48": "icons/icon16.png",
+			"128": "icons/icon16.png"
+		}
+	},
+	"permissions": ["activeTab"],
+	"content_scripts": [
+		{
+			"matches": ["*://*.fiverr.com/*"],
+			"css": ["styles.css"],
+			"js": ["content.js"]
+		}
+	]
+}
